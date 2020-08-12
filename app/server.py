@@ -9,10 +9,12 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1iRYfxkbrmHoAiV6aJbiLoaEOyXdERBe1?alt=media&key=AIzaSyA1CbVi3ynikmMs4KXq1xXnHSol27UaQ2U'
 export_file_name = 'export.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+Port = int(os.environ.get('PORT', 50000))
+
+classes = ['0','1','2','3','4','5','6','7','8','9']
 path = Path(__file__).parent
 
 app = Starlette()
@@ -66,4 +68,4 @@ async def analyze(request):
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=5000, log_level="info")
+        uvicorn.run(app=app, host='0.0.0.0', port=Port, log_level="info")
