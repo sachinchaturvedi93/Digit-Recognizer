@@ -1,3 +1,8 @@
+import numpy as np 
+import pandas as pd 
+from fastai import *
+from fastai.vision import *
+
 class CustomImageList(ImageList):
     def open(self, fn):
         img = fn.reshape(28,28)
