@@ -8,7 +8,7 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
-
+from utils import CustomImageList
 export_file_url = 'https://www.googleapis.com/drive/v3/files/1iRYfxkbrmHoAiV6aJbiLoaEOyXdERBe1?alt=media&key=AIzaSyA1CbVi3ynikmMs4KXq1xXnHSol27UaQ2U'
 export_file_name = 'export.pkl'
 
